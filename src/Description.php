@@ -170,7 +170,7 @@ class Description
         $this->market_tradable_restriction = $data['market_tradable_restriction'];
         $this->market_marketable_restriction = $data['market_marketable_restriction'] ?? null;
         $this->marketable = $data['marketable'];
-        
+
         if (!empty($data['tags'])) {
             $this->tags = \array_map(static fn ($data) => new Tag($data), $data['tags']);
         }
