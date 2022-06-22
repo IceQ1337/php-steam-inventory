@@ -62,7 +62,7 @@ final class InventoryTest extends TestCase
             'all_items' => false,
             'count' => 10,
         ];
-        
+
         $inventory = new Inventory($options);
         $items = $inventory->getItems();
 
@@ -78,7 +78,7 @@ final class InventoryTest extends TestCase
             'steamid' => '76561198129782984',
             'all_items' => true,
         ];
-        
+
         $inventory = new Inventory($options);
         $items = $inventory->getItems();
 
