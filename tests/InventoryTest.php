@@ -74,11 +74,7 @@ final class InventoryTest extends TestCase
     {
         $options = [
             'steamid' => '76561198129782984',
-            'appid' => 753,
-            'contextid' => 6,
-            'language' => 'english',
             'all_items' => true,
-            'count' => 10,
         ];
         
         $inventory = new Inventory($options);
