@@ -38,7 +38,7 @@ final class LanguageFactory
         'turkish',
         'ukrainian',
     ];
-    
+
     /**
      * Returns a list of all available languages.
      *
@@ -48,7 +48,7 @@ final class LanguageFactory
     {
         return self::$languages;
     }
-    
+
     /**
      * Returns true if the specified language is available.
      *
@@ -59,7 +59,7 @@ final class LanguageFactory
     {
         return \in_array(\strtolower($language), self::$languages);
     }
-    
+
     /**
      * Returns the default language 'english' if the specified language is not available.
      *
@@ -74,7 +74,7 @@ final class LanguageFactory
 
         return $language;
     }
-    
+
     /**
      * Returns the default language 'english'
      *

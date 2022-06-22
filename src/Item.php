@@ -17,7 +17,7 @@ class Item
      * @var Description
      */
     public Description $description;
-    
+
     /**
      * Creates a new inventory item.
      *
@@ -30,7 +30,7 @@ class Item
         $this->asset = new Asset($asset);
         $this->description = new Description($description);
     }
-    
+
     /**
      * Returns the name of the item.
      *
@@ -40,7 +40,7 @@ class Item
     {
         return $this->description->name;
     }
-    
+
     /**
      * Returns a list of item descriptions.
      *
@@ -50,7 +50,7 @@ class Item
     {
         return $this->description->descriptions;
     }
-    
+
     /**
      * Returns the item type.
      *
@@ -60,7 +60,7 @@ class Item
     {
         return $this->description->type;
     }
-    
+
     /**
      * Returns a list of item tags.
      *
@@ -70,7 +70,7 @@ class Item
     {
         return $this->description->tags;
     }
-    
+
     /**
      * Returns the URL for the icon image of the item.
      *
@@ -90,7 +90,7 @@ class Item
     {
         return $this->description->getIconLarge();
     }
-    
+
     /**
      * Returns 'true' if the item is tradable.
      *
@@ -100,7 +100,7 @@ class Item
     {
         return $this->description->tradable;
     }
-    
+
     /**
      * Returns 'true' if the item is marketable.
      *

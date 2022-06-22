@@ -10,42 +10,42 @@ class Asset
      * @var string
      */
     public $appid;
-    
+
     /**
      * The 'contextid' of the item asset.
      *
      * @var string
      */
     public $contextid;
-    
+
     /**
      * The 'assetid' of the item asset.
      *
      * @var string
      */
     public $assetid;
-    
+
     /**
      * The 'classid' of the item asset.
      *
      * @var string
      */
     public $classid;
-    
+
     /**
      * The 'instanceid' of the item asset.
      *
      * @var string
      */
     public $instanceid;
-    
+
     /**
      * The 'amount' of the item asset.
      *
      * @var string
      */
     public $amount;
-    
+
     /**
      * Creates a new item asset.
      *

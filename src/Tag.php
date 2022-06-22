@@ -10,28 +10,28 @@ class Tag
      * @var string
      */
     public $category;
-    
+
     /**
      * The internal name of the item tag.
      *
      * @var string
      */
     public $internal_name;
-    
+
     /**
      * The localized category name of the item tag.
      *
      * @var string
      */
     public $localized_category_name;
-    
+
     /**
      * The localized name of the item tag.
      *
      * @var string
      */
     public $localized_tag_name;
-    
+
     /**
      * Creates a new item tag.
      *

@@ -13,35 +13,35 @@ class Inventory
      * @var Item[]
      */
     public $items = [];
-    
+
     /**
      * 1 (true) if more items can be fetched from the inventory.
      *
      * @var int|null
      */
     public $more_items;
-    
+
     /**
      * ID of the last fetched asset, 'null' if no more items are available.
      *
      * @var string|null
      */
     public $last_assetid;
-    
+
     /**
      * Total number of items in inventory with given context
      *
      * @var int
      */
     public $total_inventory_count;
-        
+
     /**
      * Options array for specifying the request parameters.
      *
      * @var array
      */
     private $options = [];
-    
+
     /**
      * A GuzzleHTTP client to handle web requests.
      *
@@ -85,7 +85,7 @@ class Inventory
 
         $this->fetchInventory();
     }
-    
+
     /**
      * Returns a list of all items in inventory.
      *
@@ -95,7 +95,7 @@ class Inventory
     {
         return $this->items;
     }
-    
+
     /**
      * Adds item entries to the inventory.
      *
@@ -114,7 +114,7 @@ class Inventory
             }
         }
     }
-    
+
     /**
      * Initiates the Steam API request(s).
      *
@@ -135,7 +135,7 @@ class Inventory
             }
         }
     }
-    
+
     /**
      * Executes the request to the Steam API and saves the response.
      *
@@ -177,7 +177,7 @@ class Inventory
 
         return $this->options['steamid'] . '/' . $this->options['appid'] . '/' . $this->options['contextid'] . '?' . $queryParameters;
     }
-    
+
     /**
      * Returns 'true' if the response from the Steam server is valid.
      *
