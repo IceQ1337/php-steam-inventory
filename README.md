@@ -1,9 +1,9 @@
 # PHP Steam Inventory
 [![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%208.0-8892BF.svg?style=flat-square)](https://php.net/)  
 
-This library provides an easy way to access the public Steam Inventory API (https://steamcommunity.com/inventory/) from your PHP code. It provides a simple interface to make requests to the API and retrieve information about Steam users' inventories.  
+This library provides an easy way to access the public Steam Inventory API (https://steamcommunity.com/inventory/) from your PHP code. It provides a simple interface to make requests to the API and retrieve information about Steam users' inventories, specifically their items.  
 
-This PHP library is designed to be easily extendable by other developers.  
+This PHP library is designed to be easily extendable by other developers. It should be well documented and includes a comprehensive test suite.  
 
 ## Requirements
 This library supports all [officially and actively supported PHP versions](https://www.php.net/supported-versions.php).
