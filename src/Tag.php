@@ -45,4 +45,24 @@ class Tag
         $this->localized_category_name = $data['localized_category_name'];
         $this->localized_tag_name = $data['localized_tag_name'];
     }
+
+    /**
+     * Returns the localized category name.
+     *
+     * @return string
+     */
+    public function getCategory(): string
+    {
+        return $this->localized_category_name;
+    }
+
+    /**
+     * Returns the localized tag name.
+     *
+     * @return string
+     */
+    public function getName(): string
+    {
+        return $this->localized_tag_name;
+    }
 }
