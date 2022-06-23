@@ -1,5 +1,11 @@
 <?php
 
+/*
+ * Retrieve all CSGO items from the inventory.
+ * App-ID: 730
+ * Context-ID: 2
+ */
+
 require_once('../vendor/autoload.php');
 
 use SteamInventory\Inventory;
@@ -8,7 +14,6 @@ $options = [
     'steamid' => '76561198129782984',
     'appid' => 730,
     'contextid' => 2,
-    'language' => 'english',
     'all_items' => true,
 ];
 
