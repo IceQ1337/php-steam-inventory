@@ -38,12 +38,11 @@ final class InventoryTest extends TestCase
     public function testInventoryFromPrivateProfile()
     {
         $this->expectException('Exception');
+        $this->expectExceptionMessageMatches('/403/');
 
         $inventory = new Inventory([
             'steamid' => '76561198033858363',
         ]);
-
-        // To-Do: Improve handling of '403 Forbidden' responses.
     }
 
     // To-Do
