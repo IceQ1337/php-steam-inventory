@@ -45,10 +45,19 @@ final class InventoryTest extends TestCase
         ]);
     }
 
-    // To-Do
     public function testInventoryEmpty()
     {
-        $this->expectNotToPerformAssertions();
+        $this->expectException('Exception');
+        $this->expectExceptionMessage('The inventory is empty.');
+
+        $options = [
+            'steamid' => '76561198129782984',
+            'appid' => 440,
+            'contextid' => 2,
+            'all_items' => true,
+        ];
+
+        $inventory = new Inventory($options);
     }
 
     public function testInventoryWithMoreItems()
