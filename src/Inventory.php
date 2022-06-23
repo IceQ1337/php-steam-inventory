@@ -153,7 +153,11 @@ class Inventory
         $data = \json_decode($response->getBody()->getContents(), true);
 
         if (!$this->isValidResponse($data)) {
-            throw new \Exception('Based on the response data, the request was unsuccessful.');
+            throw new \Exception('The request was unsuccessful.');
+        }
+
+        if ($this->isEmptyInventory($data)) {
+            throw new \Exception('The inventory is empty.');
         }
 
         $this->setItems($data['assets'], $data['descriptions']);
@@ -181,11 +185,26 @@ class Inventory
     /**
      * Returns 'true' if the response from the Steam server is valid.
      *
-     * @param  array $response
+     * @param  array $data
      * @return bool
      */
     private function isValidResponse($data): bool
     {
-        return $data['success'] && isset($data['assets'], $data['descriptions']);
+        return $data['success'];
+    }
+
+    /**
+     * Returns 'true' if the response returned an empty inventory.
+     *
+     * @param  array $data
+     * @return bool
+     */
+    private function isEmptyInventory($data): bool
+    {
+        if ($data['total_inventory_count'] == 0) {
+            return true;
+        }
+
+        return !isset($data['assets'], $data['descriptions']);
     }
 }
