@@ -92,6 +92,28 @@ class Item
     }
 
     /**
+     * Returns the amount of the item (e.g. for Steam Gems).
+     * Note: Steam Gems are often split into separate items. The amount is not accumulated.
+     *
+     * @return int
+     */
+    public function getAmount(): int
+    {
+        return \intval($this->asset->amount);
+    }
+
+    /**
+     * Returns the appid of the game this item belongs to
+     * if it differs from the inventory appid.
+     *
+     * @return int|null
+     */
+    public function getGameID(): mixed
+    {
+        return $this->description->market_fee_app;
+    }
+
+    /**
      * Returns 'true' if the item is tradable.
      *
      * @return bool
