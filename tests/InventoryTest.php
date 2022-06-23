@@ -56,10 +56,6 @@ final class InventoryTest extends TestCase
     {
         $options = [
             'steamid' => '76561198129782984',
-            'appid' => 753,
-            'contextid' => 6,
-            'language' => 'english',
-            'all_items' => false,
             'count' => 10,
         ];
 
