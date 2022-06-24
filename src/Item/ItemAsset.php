@@ -1,8 +1,8 @@
 <?php
 
-namespace SteamInventory;
+namespace SteamInventory\Item;
 
-class Asset
+class ItemAsset
 {
     /**
      * The 'appid' of the item asset.

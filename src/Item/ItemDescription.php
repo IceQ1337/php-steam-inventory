@@ -1,8 +1,8 @@
 <?php
 
-namespace SteamInventory;
+namespace SteamInventory\Item;
 
-class Description
+class ItemDescription
 {
     /**
      * The base URL for item images.
@@ -140,7 +140,7 @@ class Description
     /**
      * List of tags for the item.
      *
-     * @var Tag[]
+     * @var ItemTag[]
      */
     public $tags = [];
 
@@ -172,7 +172,7 @@ class Description
         $this->marketable = $data['marketable'];
 
         if (!empty($data['tags'])) {
-            $this->tags = \array_map(static fn ($data) => new Tag($data), $data['tags']);
+            $this->tags = \array_map(static fn ($data) => new ItemTag($data), $data['tags']);
         }
     }
 

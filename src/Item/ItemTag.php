@@ -1,8 +1,8 @@
 <?php
 
-namespace SteamInventory;
+namespace SteamInventory\Item;
 
-class Tag
+class ItemTag
 {
     /**
      * The category name of the item tag.
