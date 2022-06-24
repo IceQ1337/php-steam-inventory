@@ -75,7 +75,7 @@ class Inventory
             'contextid' => $options['contextid'] ?? 6,
             'language' => isset($options['language']) ? LanguageFactory::getLanguage($options['language']) : LanguageFactory::getDefaultLanguage(),
             'all_items' => $options['all_items'] ?? false,
-            'count' => $options['count'] ?? 5000,
+            'count' => $options['count'] ?? 500,
             'start_assetid' => $options['start_assetid'] ?? null,
         ];
 

@@ -23,7 +23,7 @@ $options = [
     'contextid' => 6, // default: 6
     'language' => 'english', // default: 'english'
     'all_items' => false, // default: false
-    'count' => 100, // default: 5000, max: 5000
+    'count' => 100, // default: 500, max: 5000
     'start_assetid' => null, // default: null, used for consecutive requests
 ];
 
