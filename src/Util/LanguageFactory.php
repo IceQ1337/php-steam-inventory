@@ -1,6 +1,6 @@
 <?php
 
-namespace SteamInventory;
+namespace SteamInventory\Util;
 
 final class LanguageFactory
 {

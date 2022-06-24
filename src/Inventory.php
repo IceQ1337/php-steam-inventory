@@ -4,6 +4,7 @@ namespace SteamInventory;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
+use SteamInventory\Util\LanguageFactory;
 
 class Inventory
 {

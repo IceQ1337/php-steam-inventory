@@ -3,7 +3,7 @@
 namespace Tests;
 
 use PHPUnit\Framework\TestCase;
-use SteamInventory\LanguageFactory;
+use SteamInventory\Util\LanguageFactory;
 
 final class LanguageTest extends TestCase
 {
