@@ -52,6 +52,7 @@ class Inventory
     /**
      * Creates new inventory and fetches data from the Steam API.
      *
+     * @throws \Exception
      * @param  array $options
      * @return void
      */

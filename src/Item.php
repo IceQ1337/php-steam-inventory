@@ -103,13 +103,20 @@ class Item
     }
 
     /**
-     * Returns the appid of the game this item belongs to
-     * if it differs from the inventory appid.
+     * Returns the appid of the app this item belongs to
+     * if it differs from the inventory appid (e.g. for Trading Cards).
      *
      * @return int|null
      */
-    public function getGameID(): mixed
+    public function getRealAppID(): mixed
     {
+        foreach ($this->getTags() as $tag) {
+            if ($tag->category == 'Game') {
+                return \intval(\explode('_', $tag->internal_name)[1]);
+                break;
+            }
+        }
+
         return $this->description->market_fee_app;
     }
 
