@@ -1,0 +1,275 @@
+{
+    "assets": [
+        {
+            "appid": 730,
+            "contextid": "2",
+            "assetid": "25648581609",
+            "classid": "4850168587",
+            "instanceid": "0",
+            "amount": "1"
+        },
+        {
+            "appid": 730,
+            "contextid": "2",
+            "assetid": "24568031769",
+            "classid": "4578724050",
+            "instanceid": "519977179",
+            "amount": "1"
+        },
+        {
+            "appid": 730,
+            "contextid": "2",
+            "assetid": "24568030814",
+            "classid": "4578724050",
+            "instanceid": "519977179",
+            "amount": "1"
+        }
+    ],
+    "descriptions": [
+        {
+            "appid": 730,
+            "classid": "4850168587",
+            "instanceid": "0",
+            "currency": 0,
+            "background_color": "",
+            "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXQ9Q1LO5kNoBhSQl-fV-Oh6N_aUFZxKDsF5uj3FABv3_eGJTgWvt-zkoOJxKGhYO_XzzoC7px3j-rF9or32QSwr0FqYGuhcYOVIxh-Pw-uGFnu4g",
+            "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXQ9Q1LO5kNoBhSQl-fV-Oh6N_aUFZxKDsF5uj3FABv3_f3fTxQ69n4zdDYwqWiMeyHwD4J650hiO-YoNj3jVHn-UU9YW36LY_Ad1Q9MljV_U_-n7klHsXIcQ",
+            "descriptions": [
+                {
+                    "type": "html",
+                    "value": "This item commemorates the 2022 PGL Antwerp CS:GO Championship.",
+                    "color": "ffd700"
+                },
+                {
+                    "type": "html",
+                    "value": " "
+                },
+                {
+                    "type": "html",
+                    "value": "This is a commemorative PGL 2022 Antwerp CS:GO Major Championship Coin which tracks your progress throughout the event, provides full access to the Antwerp 2022 Pick'Em Challenge, Steam.tv chat flairs, coin challenges, and unlimited graffiti opportunities in-game for the duration of the event.\n\nUpgrade your Antwerp 2022 Coin by completing coin challenges. Earn a Souvenir Token every time you upgrade your coin."
+                },
+                {
+                    "type": "html",
+                    "value": " "
+                },
+                {
+                    "type": "html",
+                    "value": "",
+                    "color": "00a000"
+                },
+                {
+                    "type": "html",
+                    "value": " "
+                },
+                {
+                    "type": "html",
+                    "value": ""
+                }
+            ],
+            "tradable": 0,
+            "name": "Antwerp 2022 Gold Coin",
+            "name_color": "D2D2D2",
+            "type": "Extraordinary Collectible",
+            "market_name": "Antwerp 2022 Gold Coin",
+            "market_hash_name": "Antwerp 2022 Gold Coin",
+            "commodity": 1,
+            "market_tradable_restriction": 7,
+            "marketable": 0,
+            "tags": [
+                {
+                    "category": "Type",
+                    "internal_name": "CSGO_Type_Collectible",
+                    "localized_category_name": "Type",
+                    "localized_tag_name": "Collectible"
+                },
+                {
+                    "category": "Quality",
+                    "internal_name": "normal",
+                    "localized_category_name": "Category",
+                    "localized_tag_name": "Normal"
+                },
+                {
+                    "category": "Rarity",
+                    "internal_name": "Rarity_Ancient",
+                    "localized_category_name": "Quality",
+                    "localized_tag_name": "Extraordinary",
+                    "color": "eb4b4b"
+                },
+                {
+                    "category": "Tournament",
+                    "internal_name": "Tournament19",
+                    "localized_category_name": "Tournament",
+                    "localized_tag_name": "2022 PGL Antwerp"
+                }
+            ]
+        },
+        {
+            "appid": 730,
+            "classid": "4578724050",
+            "instanceid": "519977179",
+            "currency": 0,
+            "background_color": "",
+            "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFU5narKKW4SvIrhw9PZlaPwNuqAxmgBucNz2L3C8dyj31Xn-0VtMW3wdY6LMlhplna0TPI",
+            "descriptions": [
+                {
+                    "type": "html",
+                    "value": " "
+                },
+                {
+                    "type": "html",
+                    "value": "Container Series #321",
+                    "color": "99ccff"
+                },
+                {
+                    "type": "html",
+                    "value": " "
+                },
+                {
+                    "type": "html",
+                    "value": "Contains one of the following:"
+                },
+                {
+                    "type": "html",
+                    "value": "AUG | Plague",
+                    "color": "4b69ff"
+                },
+                {
+                    "type": "html",
+                    "value": "Dual Berettas | Tread",
+                    "color": "4b69ff"
+                },
+                {
+                    "type": "html",
+                    "value": "G3SG1 | Keeping Tabs",
+                    "color": "4b69ff"
+                },
+                {
+                    "type": "html",
+                    "value": "MP7 | Guerrilla",
+                    "color": "4b69ff"
+                },
+                {
+                    "type": "html",
+                    "value": "PP-Bizon | Lumen",
+                    "color": "4b69ff"
+                },
+                {
+                    "type": "html",
+                    "value": "USP-S | Black Lotus",
+                    "color": "4b69ff"
+                },
+                {
+                    "type": "html",
+                    "value": "XM1014 | Watchdog",
+                    "color": "4b69ff"
+                },
+                {
+                    "type": "html",
+                    "value": "MAG-7 | BI83 Spectrum",
+                    "color": "8847ff"
+                },
+                {
+                    "type": "html",
+                    "value": "FAMAS | ZX Spectron",
+                    "color": "8847ff"
+                },
+                {
+                    "type": "html",
+                    "value": "Five-SeveN | Boost Protocol",
+                    "color": "8847ff"
+                },
+                {
+                    "type": "html",
+                    "value": "MP9 | Mount Fuji",
+                    "color": "8847ff"
+                },
+                {
+                    "type": "html",
+                    "value": "M4A4 | Spider Lily",
+                    "color": "8847ff"
+                },
+                {
+                    "type": "html",
+                    "value": "MAC-10 | Toybox",
+                    "color": "d32ce6"
+                },
+                {
+                    "type": "html",
+                    "value": "Glock-18 | Snack Attack",
+                    "color": "d32ce6"
+                },
+                {
+                    "type": "html",
+                    "value": "SSG 08 | Turbo Peek",
+                    "color": "d32ce6"
+                },
+                {
+                    "type": "html",
+                    "value": "AK-47 | Leet Museo",
+                    "color": "eb4b4b"
+                },
+                {
+                    "type": "html",
+                    "value": "Desert Eagle | Ocean Drive",
+                    "color": "eb4b4b"
+                },
+                {
+                    "type": "html",
+                    "value": "or an Exceedingly Rare Special Item!",
+                    "color": "ffd700"
+                },
+                {
+                    "type": "html",
+                    "value": " "
+                },
+                {
+                    "type": "html",
+                    "value": "",
+                    "color": "00a000"
+                }
+            ],
+            "tradable": 1,
+            "name": "Operation Riptide Case",
+            "name_color": "D2D2D2",
+            "type": "Base Grade Container",
+            "market_name": "Operation Riptide Case",
+            "market_hash_name": "Operation Riptide Case",
+            "commodity": 1,
+            "market_tradable_restriction": 7,
+            "marketable": 1,
+            "tags": [
+                {
+                    "category": "Type",
+                    "internal_name": "CSGO_Type_WeaponCase",
+                    "localized_category_name": "Type",
+                    "localized_tag_name": "Container"
+                },
+                {
+                    "category": "ItemSet",
+                    "internal_name": "set_community_29",
+                    "localized_category_name": "Collection",
+                    "localized_tag_name": "The Operation Riptide Collection"
+                },
+                {
+                    "category": "Quality",
+                    "internal_name": "normal",
+                    "localized_category_name": "Category",
+                    "localized_tag_name": "Normal"
+                },
+                {
+                    "category": "Rarity",
+                    "internal_name": "Rarity_Common",
+                    "localized_category_name": "Quality",
+                    "localized_tag_name": "Base Grade",
+                    "color": "b0c3d9"
+                }
+            ],
+            "market_buy_country_restriction": "FR"
+        }
+    ],
+    "more_items": 1,
+    "last_assetid": "24568030814",
+    "total_inventory_count": 751,
+    "success": 1,
+    "rwgrsn": -2
+}

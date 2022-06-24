@@ -1,0 +1,218 @@
+{
+    "assets": [
+        {
+            "appid": 753,
+            "contextid": "6",
+            "assetid": "7696807960",
+            "classid": "667924416",
+            "instanceid": "0",
+            "amount": "4"
+        },
+        {
+            "appid": 753,
+            "contextid": "6",
+            "assetid": "21008059877",
+            "classid": "4890583450",
+            "instanceid": "3172297812",
+            "amount": "1"
+        },
+        {
+            "appid": 753,
+            "contextid": "6",
+            "assetid": "20978446082",
+            "classid": "1150465647",
+            "instanceid": "0",
+            "amount": "1"
+        }
+    ],
+    "descriptions": [
+        {
+            "appid": 753,
+            "classid": "667924416",
+            "instanceid": "0",
+            "currency": 0,
+            "background_color": "",
+            "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxH5rd9eDAjcFyv45SRYAFMIcKL_PArgVSL403ulRUWEndVKv6gpycBw8gJ10Hsr_3e1Vkg_WcKW5A6YnkxdWIlPHxZL3XxmgJ7pUgiLuQocLlhlPWS9wAxg",
+            "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxH5rd9eDAjcFyv45SRYAFMIcKL_PArgVSL403ulRUWEndVKv6gpycBVglIFRRtOPwewYz1qCdcGQb6IrhzdHZwPbwNeKAzj0D65Un0uqQpMLlhlPNIsEiPQ",
+            "descriptions": [
+                {
+                    "value": ""
+                }
+            ],
+            "tradable": 1,
+            "owner_actions": [
+                {
+                    "link": "javascript:PackGameGooIntoBarrel( 753, '%assetid%', 1, 1000, this )",
+                    "name": "Pack Gems into a Sack"
+                },
+                {
+                    "link": "javascript:ViewBoosterPackStore()",
+                    "name": "Create Booster Pack..."
+                }
+            ],
+            "name": "Gems",
+            "type": "Steam Gems",
+            "market_name": "Gems",
+            "market_hash_name": "753-Gems",
+            "market_fee_app": 753,
+            "commodity": 1,
+            "market_tradable_restriction": 7,
+            "market_marketable_restriction": 7,
+            "marketable": 0,
+            "tags": [
+                {
+                    "category": "droprate",
+                    "internal_name": "droprate_0",
+                    "localized_category_name": "Rarity",
+                    "localized_tag_name": "Common"
+                },
+                {
+                    "category": "Game",
+                    "internal_name": "app_753",
+                    "localized_category_name": "Game",
+                    "localized_tag_name": "Steam"
+                },
+                {
+                    "category": "Event",
+                    "internal_name": "wintersale2014",
+                    "localized_category_name": "Event",
+                    "localized_tag_name": "Holiday Sale 2014"
+                },
+                {
+                    "category": "item_class",
+                    "internal_name": "item_class_7",
+                    "localized_category_name": "Item Type",
+                    "localized_tag_name": "Gems"
+                }
+            ]
+        },
+        {
+            "appid": 753,
+            "classid": "4890583450",
+            "instanceid": "3172297812",
+            "currency": 0,
+            "background_color": "",
+            "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxH5rd9eDAjcFyv45SRYAFMIcKL_PArgVSL403ulRUWEndVKv_h52CCwgkagEO7r_0KgYyh6CdcDsWtI_nloWKlPb3YeqEzm1Q7ZF00uyZo9us2AP6oQM7uvfYLq4",
+            "icon_url_large": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxH5rd9eDAjcFyv45SRYAFMIcKL_PArgVSL403ulRUWEndVKv_h52CCwgkagcB5rige1Vh1feYKW4Tutq3zNiPkvGhZuyBwz8D6ZUi37iZpt_30QX6oQM7H2kOYyM",
+            "descriptions": [
+                {
+                    "value": ""
+                }
+            ],
+            "tradable": 0,
+            "owner_descriptions": [
+                {
+                    "value": "Received from completing tasks during an event.",
+                    "color": "9C9C9C"
+                }
+            ],
+            "owner_actions": [
+                {
+                    "link": "javascript:EquipOnSteamProfile()",
+                    "name": "Equip on Edit Profile Page"
+                }
+            ],
+            "name": "Steam 3000",
+            "name_color": "e4ca63",
+            "type": "Steam 3000 Profile Modifier",
+            "market_name": "Steam 3000",
+            "market_hash_name": "2021850-Steam 3000",
+            "market_fee_app": 2021850,
+            "commodity": 1,
+            "market_tradable_restriction": 7,
+            "market_marketable_restriction": 7,
+            "marketable": 0,
+            "tags": [
+                {
+                    "category": "droprate",
+                    "internal_name": "droprate_0",
+                    "localized_category_name": "Rarity",
+                    "localized_tag_name": "Common"
+                },
+                {
+                    "category": "Game",
+                    "internal_name": "app_2021850",
+                    "localized_category_name": "Game",
+                    "localized_tag_name": "Steam 3000"
+                },
+                {
+                    "category": "Event",
+                    "internal_name": "summersale2022",
+                    "localized_category_name": "Event",
+                    "localized_tag_name": "Summer Sale 2022"
+                },
+                {
+                    "category": "item_class",
+                    "internal_name": "item_class_8",
+                    "localized_category_name": "Item Type",
+                    "localized_tag_name": "Profile Modifier"
+                }
+            ]
+        },
+        {
+            "appid": 753,
+            "classid": "1150465647",
+            "instanceid": "0",
+            "currency": 0,
+            "background_color": "",
+            "icon_url": "IzMF03bk9WpSBq-S-ekoE33L-iLqGFHVaU25ZzQNQcXdA3g5gMEPvUZZEfSMJ6dESN8p_2SVTY7V2NoJzXcOmChCIzb02ClZZO5lNsyNxwr0pamOHWbyIzjCZDHYCFdtE_cdIzGEr2Tw6OucQWzMQesoQlwNLvcHpmMfPsGMORFo3Y8PqTTplRZ_SEB_JpIUKQv1wGQUd78q2iUXN_QLxHWnc5nQhwpjaEQ-U73mBO7HZ4CgmHkhCxpnTKYbN4-SvXTlrJGlbfeGeP9ierFp-IORigR7xItXhQ",
+            "icon_url_large": "IzMF03bk9WpSBq-S-ekoE33L-iLqGFHVaU25ZzQNQcXdA3g5gMEPvUZZEfSMJ6dESN8p_2SVTY7V2NoJzXcOmChCIzb02ClZZO5lNsyNxwr0pamOHWbyIzjCZDHYCFdtE_cdIzGEr2Tw6OucQWzMQesoQlwNLvcHpmMfPsGMORFo3Y8PqTTplRZ_SEB_JpIUKQv1wGQUd78q2iUXN_QLxHWnc5nQhwpjaEQ-U73mBO7HZ4CgmHkhCxpnTKYbN4-SvXTlrJGlbfeGeP9ierFp-IORigR7xItXhQ",
+            "descriptions": [
+                {
+                    "value": "Taking good care of patients"
+                }
+            ],
+            "tradable": 1,
+            "owner_actions": [
+                {
+                    "link": "https://steamcommunity.com/my/gamecards/369420/",
+                    "name": "View badge progress"
+                },
+                {
+                    "link": "javascript:GetGooValue( '%contextid%', '%assetid%', 369420, 13, 0 )",
+                    "name": "Turn into Gems..."
+                }
+            ],
+            "name": "Taking good care of patients",
+            "type": "9 Clues 2: The Ward Trading Card",
+            "market_name": "Taking good care of patients",
+            "market_hash_name": "369420-Taking good care of patients",
+            "market_fee_app": 369420,
+            "commodity": 1,
+            "market_tradable_restriction": 7,
+            "market_marketable_restriction": 7,
+            "marketable": 1,
+            "tags": [
+                {
+                    "category": "droprate",
+                    "internal_name": "droprate_0",
+                    "localized_category_name": "Rarity",
+                    "localized_tag_name": "Common"
+                },
+                {
+                    "category": "Game",
+                    "internal_name": "app_369420",
+                    "localized_category_name": "Game",
+                    "localized_tag_name": "9 Clues 2: The Ward"
+                },
+                {
+                    "category": "cardborder",
+                    "internal_name": "cardborder_0",
+                    "localized_category_name": "Card Border",
+                    "localized_tag_name": "Normal"
+                },
+                {
+                    "category": "item_class",
+                    "internal_name": "item_class_2",
+                    "localized_category_name": "Item Type",
+                    "localized_tag_name": "Trading Card"
+                }
+            ]
+        }
+    ],
+    "more_items": 1,
+    "last_assetid": "20978446082",
+    "total_inventory_count": 2667,
+    "success": 1,
+    "rwgrsn": -2
+}
