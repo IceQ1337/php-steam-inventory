@@ -35,11 +35,11 @@ final class ItemTest extends TestCase
 
         return $items;
     }
-    
-    public function testWithoutAssertions()
-    {
-        $this->expectNotToPerformAssertions();
-    }
+
+    // public function testWithoutAssertions()
+    // {
+    //     $this->expectNotToPerformAssertions();
+    // }
 
     public function testItemCreation()
     {

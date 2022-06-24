@@ -139,7 +139,7 @@ class Item
     {
         return $this->description->marketable;
     }
-    
+
     /**
      * Returns a human readable type identifier for Steam items.
      * TODO: Clean-up this mess (Item Type Objects?)
