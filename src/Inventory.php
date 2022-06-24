@@ -4,6 +4,9 @@ namespace SteamInventory;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
+use SteamInventory\Exception\EmptyInventoryException;
+use SteamInventory\Exception\InventoryOptionsException;
+use SteamInventory\Exception\PrivateInventoryException;
 use SteamInventory\Item\Item;
 use SteamInventory\Util\LanguageFactory;
 
@@ -54,22 +57,22 @@ class Inventory
     /**
      * Creates new inventory and fetches data from the Steam API.
      *
-     * @throws \Exception
      * @param  array $options
      * @return void
+     * @throws InventoryOptionsException
      */
     public function __construct($options)
     {
         if (!\is_array($options)) {
-            throw new \Exception('$options must be of type array.');
+            throw new InventoryOptionsException('$options must be of type array.');
         }
 
         if (empty($options['steamid'])) {
-            throw new \Exception('$options must specify a steamid.');
+            throw new InventoryOptionsException('$options must specify a steamid.');
         }
 
         if (!\preg_match('/[^\/][0-9]{8,}/', $options['steamid'])) {
-            throw new \Exception('$options contains an invalid steamid.');
+            throw new InventoryOptionsException('$options contains an invalid steamid.');
         }
 
         $this->options = [
@@ -140,27 +143,44 @@ class Inventory
     }
 
     /**
-     * Executes the request to the Steam API and saves the response.
+     * Executes the request to the Steam API.
      *
-     * @throws \Exception
      * @return void
+     * @throws \Exception
+     * @throws PrivateInventoryException
      */
     private function requestInventory(): void
     {
         try {
             $response = $this->httpClient->get($this->getRelativeUri());
         } catch (ClientException $e) {
+            if (\preg_match('/403/', $e->getMessage())) {
+                throw new PrivateInventoryException();
+            }
             throw new \Exception($e->getMessage());
         }
 
         $data = \json_decode($response->getBody()->getContents(), true);
 
+        $this->parseInventory($data);
+    }
+
+    /**
+     * Parses and saves the response from the Steam API.
+     *
+     * @param  string $response
+     * @return void
+     * @throws \Exception
+     * @throws EmptyInventoryException
+     */
+    private function parseInventory(array $data): void
+    {
         if (!$this->isValidResponse($data)) {
-            throw new \Exception('The request was unsuccessful.');
+            throw new \Exception('The API request was unsuccessful.');
         }
 
         if ($this->isEmptyInventory($data)) {
-            throw new \Exception('The inventory is empty.');
+            throw new EmptyInventoryException();
         }
 
         $this->setItems($data['assets'], $data['descriptions']);
