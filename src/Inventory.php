@@ -148,7 +148,9 @@ class Inventory
      *
      * @return void
      * @throws PrivateInventoryException
+     * The API endpoint always returns a 403 on errors. It's just assumed that the inventory is private if the request was ok.
      * @throws RequestFailedException
+     * If the API does not return a 403, the error may be in the request itself.
      */
     private function requestInventory(): void
     {
