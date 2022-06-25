@@ -6,6 +6,7 @@ use PHPUnit\Framework\TestCase;
 use SteamInventory\Exception\EmptyInventoryException;
 use SteamInventory\Exception\InventoryOptionsException;
 use SteamInventory\Exception\PrivateInventoryException;
+use SteamInventory\Exception\RequestFailedException;
 use SteamInventory\Inventory;
 
 final class InventoryTest extends TestCase
@@ -44,6 +45,16 @@ final class InventoryTest extends TestCase
 
         $inventory = new Inventory([
             'steamid' => '76561198033858363',
+        ]);
+    }
+
+    public function testInventoryOnInvalidResponse()
+    {
+        $this->expectException(RequestFailedException::class);
+
+        $inventory = new Inventory([
+            'steamid' => '76561198033858363',
+            'contextid' => 1,
         ]);
     }
 

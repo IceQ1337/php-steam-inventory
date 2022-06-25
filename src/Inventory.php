@@ -7,6 +7,7 @@ use GuzzleHttp\Exception\ClientException;
 use SteamInventory\Exception\EmptyInventoryException;
 use SteamInventory\Exception\InventoryOptionsException;
 use SteamInventory\Exception\PrivateInventoryException;
+use SteamInventory\Exception\RequestFailedException;
 use SteamInventory\Item\Item;
 use SteamInventory\Util\LanguageFactory;
 
@@ -146,8 +147,8 @@ class Inventory
      * Executes the request to the Steam API.
      *
      * @return void
-     * @throws \Exception
      * @throws PrivateInventoryException
+     * @throws RequestFailedException
      */
     private function requestInventory(): void
     {
@@ -157,10 +158,15 @@ class Inventory
             if (\preg_match('/403/', $e->getMessage())) {
                 throw new PrivateInventoryException();
             }
-            throw new \Exception($e->getMessage());
+
+            throw new RequestFailedException($e->getMessage());
         }
 
         $data = \json_decode($response->getBody()->getContents(), true);
+
+        if (!$this->isValidResponse($data)) {
+            throw new RequestFailedException('The Steam API returned an invalid response.');
+        }
 
         $this->parseInventory($data);
     }
@@ -170,15 +176,10 @@ class Inventory
      *
      * @param  string $response
      * @return void
-     * @throws \Exception
      * @throws EmptyInventoryException
      */
     private function parseInventory(array $data): void
     {
-        if (!$this->isValidResponse($data)) {
-            throw new \Exception('The API request was unsuccessful.');
-        }
-
         if ($this->isEmptyInventory($data)) {
             throw new EmptyInventoryException();
         }
@@ -213,7 +214,7 @@ class Inventory
      */
     private function isValidResponse($data): bool
     {
-        return $data['success'];
+        return \boolval($data['success']);
     }
 
     /**
