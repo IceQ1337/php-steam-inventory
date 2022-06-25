@@ -2,6 +2,8 @@
     "name": "iceq1337/steam-inventory-api",
     "description": "PHP library to fetch items from the Steam inventory",
     "type": "library",
+    "keywords": ["steam","inventory","api"],
+    "homepage": "https://github.com/IceQ1337/php-steam-inventory",
     "license": "MIT",
     "autoload": {
         "psr-4": {
