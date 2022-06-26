@@ -61,7 +61,7 @@ composer run lint
 ```
 
 ### License
-This library is licensed under [MIT](https://github.com/IceQ1337/php-steam-inventory/blob/master/LICENSE).  
+This library is licensed under the [MIT license](https://github.com/IceQ1337/php-steam-inventory/blob/master/LICENSE).  
 
 ### Credits
 Parts of this library are based on [PHP Steam Inventory](https://github.com/matthewlilley/php-steam-inventory) published by [matthewlilley](https://github.com/matthewlilley) in 2018.
