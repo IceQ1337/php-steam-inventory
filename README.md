@@ -1,12 +1,20 @@
 # PHP Steam Inventory
 [![Latest Stable Version](http://poser.pugx.org/iceq1337/steam-inventory-api/v)](https://packagist.org/packages/iceq1337/steam-inventory-api) [![Total Downloads](http://poser.pugx.org/iceq1337/steam-inventory-api/downloads)](https://packagist.org/packages/iceq1337/steam-inventory-api) [![License](http://poser.pugx.org/iceq1337/steam-inventory-api/license)](https://packagist.org/packages/iceq1337/steam-inventory-api) [![PHP Version Require](http://poser.pugx.org/iceq1337/steam-inventory-api/require/php)](https://packagist.org/packages/iceq1337/steam-inventory-api)
 
-This library provides an easy way to access the public Steam Inventory API (https://steamcommunity.com/inventory/) from your PHP code. It provides a simple interface to make requests to the API and retrieve information about Steam users' inventories, specifically their items.  
+This library provides an easy way to access the public Steam Inventory API (https://steamcommunity.com/inventory/) from your PHP code. It provides a simple interface to retrieve a Steam user's inventory from the API with information about the items in it.  
 
-This PHP library is designed to be easily extendable by other developers. It should be well documented and includes a comprehensive test suite.  
+Using this API does not require an API key, but as it is not part of the Steam Web API, the rate limit of 100,000 requests per day does not apply. Instead, the rate limit for this API is extremely low. So use this API or rather this library with caution.  
+
+While using this API is generally discouraged, it has been part of Steam since forever and despite or perhaps because its rework in 2016, it is probably here to stay.  
+
+The library is designed to be easily extendable by other developers. It should be well documented and includes a comprehensive test suite.  
 
 ## Requirements
-This library supports all [officially and actively supported PHP versions](https://www.php.net/supported-versions.php).
+* PHP 8.X  
+
+This library supports all [officially and actively supported PHP versions](https://www.php.net/supported-versions.php). PHP 7.4 will soon reach its EOL on November 28, 2022 and the library already makes use of useful features from PHP 8.0, so this version is no longer supported.  
+
+See the ``composer.json`` for other requirements.  
 
 ## Installation
 ```shell
@@ -45,8 +53,15 @@ There are currently no contributing guidelines. In order to contribute to the pr
 - **Push** your work to your own fork.
 - Submit a **Pull Request** so I can review your changes
 
+Please make sure you always run the tests and apply the code style before submitting your pull request. All tests and the code style workflow must pass in order for the pull request to be approved and merged.  
+
+```shell
+composer run test
+composer run lint
+```
+
 ### License
-[MIT](https://github.com/IceQ1337/php-steam-inventory/blob/master/LICENSE)
+This library is licensed under [MIT](https://github.com/IceQ1337/php-steam-inventory/blob/master/LICENSE).  
 
 ### Credits
-- Parts of this library are based on [PHP Steam Inventory](https://github.com/matthewlilley/php-steam-inventory) published by [matthewlilley](https://github.com/matthewlilley) in 2018.
+Parts of this library are based on [PHP Steam Inventory](https://github.com/matthewlilley/php-steam-inventory) published by [matthewlilley](https://github.com/matthewlilley) in 2018.
