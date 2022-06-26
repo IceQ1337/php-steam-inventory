@@ -3,13 +3,16 @@
 namespace Tests;
 
 use PHPUnit\Framework\TestCase;
+use SteamInventory\Exception\EmptyInventoryException;
+use SteamInventory\Exception\InventoryOptionsException;
+use SteamInventory\Exception\PrivateInventoryException;
 use SteamInventory\Inventory;
 
 final class InventoryTest extends TestCase
 {
     public function testInventoryOptionsInvalid()
     {
-        $this->expectException('Exception');
+        $this->expectException(InventoryOptionsException::class);
         $this->expectExceptionMessage('$options must be of type array.');
 
         $inventory = new Inventory(true);
@@ -17,7 +20,7 @@ final class InventoryTest extends TestCase
 
     public function testInventoryOptionsWithoutSteamID()
     {
-        $this->expectException('Exception');
+        $this->expectException(InventoryOptionsException::class);
         $this->expectExceptionMessage('$options must specify a steamid.');
 
         $inventory = new Inventory([
@@ -27,7 +30,7 @@ final class InventoryTest extends TestCase
 
     public function testInventoryOptionsWithInvalidSteamID()
     {
-        $this->expectException('Exception');
+        $this->expectException(InventoryOptionsException::class);
         $this->expectExceptionMessage('$options contains an invalid steamid.');
 
         $inventory = new Inventory([
@@ -37,8 +40,7 @@ final class InventoryTest extends TestCase
 
     public function testInventoryFromPrivateProfile()
     {
-        $this->expectException('Exception');
-        $this->expectExceptionMessageMatches('/403/');
+        $this->expectException(PrivateInventoryException::class);
 
         $inventory = new Inventory([
             'steamid' => '76561198033858363',
@@ -47,8 +49,7 @@ final class InventoryTest extends TestCase
 
     public function testInventoryEmpty()
     {
-        $this->expectException('Exception');
-        $this->expectExceptionMessage('The inventory is empty.');
+        $this->expectException(EmptyInventoryException::class);
 
         $options = [
             'steamid' => '76561198129782984',

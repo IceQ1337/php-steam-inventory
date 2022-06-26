@@ -144,8 +144,8 @@ class Item
      * Returns a human readable type identifier for Steam items.
      * TODO: Clean-up this mess (Item Type Objects?)
      *
-     * @throws \Exception
      * @return string
+     * @throws \Exception
      */
     public function getSteamItemType(): string
     {
