@@ -156,56 +156,30 @@ class Item
         $itemType = 'Unknown';
 
         foreach ($this->getTags() as $tag) {
-            switch ($tag->category) {
-                case 'cardborder':
-                    switch ($tag->internal_name) {
-                        case 'cardborder_0':
-                            return 'TradingCard';
-                        case 'cardborder_1':
-                            return 'FoilTradingCard';
-                        default:
-                            return 'Unknown';
-                    }
-                    // no break
-                case 'item_class':
-                    switch ($tag->internal_name) {
-                        case 'item_class_2':
-                            if ($itemType == 'Unknown') {
-                                $itemType = 'TradingCard';
-                            }
-                            break;
-                        case 'item_class_3':
-                            return 'ProfileBackground';
-                        case 'item_class_4':
-                            return 'Emoticon';
-                        case 'item_class_5':
-                            return 'BoosterPack';
-                        case 'item_class_6':
-                            return 'Consumable';
-                        case 'item_class_7':
-                            return 'SteamGems';
-                        case 'item_class_8':
-                            return 'ProfileModifier';
-                        case 'item_class_10':
-                            return 'SaleItem';
-                        case 'item_class_11':
-                            return 'Sticker';
-                        case 'item_class_12':
-                            return 'ChatEffect';
-                        case 'item_class_13':
-                            return 'MiniProfileBackground';
-                        case 'item_class_14':
-                            return 'AvatarProfileFrame';
-                        case 'item_class_15':
-                            return 'AnimatedAvatar';
-                        case 'item_class_16':
-                            return 'KeyboardSkin';
-                        default:
-                            return 'Unknown';
-                    }
-                    // no break
-                default:
-                    return 'Unknown';
+            if ($tag->category == 'cardborder') {
+                $itemType = match ($tag->internal_name) {
+                    'cardborder_0' => 'TradingCard',
+                    'cardborder_1' => 'FoilTradingCard',
+                };
+            }
+
+            if ($tag->category == 'item_class') {
+                $itemType = match ($tag->internal_name) {
+                    'item_class_2' => ($itemType == 'Unknown') ? 'TradingCard' : $itemType,
+                    'item_class_3' => 'ProfileBackground',
+                    'item_class_4' => 'Emoticon',
+                    'item_class_5' => 'BoosterPack',
+                    'item_class_6' => 'Consumable',
+                    'item_class_7' => 'SteamGems',
+                    'item_class_8' => 'ProfileModifier',
+                    'item_class_10' => 'SaleItem',
+                    'item_class_11' => 'Sticker',
+                    'item_class_12' => 'ChatEffect',
+                    'item_class_13' => 'MiniProfileBackground',
+                    'item_class_14' => 'AvatarProfileFrame',
+                    'item_class_15' => 'AnimatedAvatar',
+                    'item_class_16' => 'KeyboardSkin',
+                };
             }
         }
 
