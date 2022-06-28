@@ -142,7 +142,6 @@ class Item
 
     /**
      * Returns a human readable type identifier for Steam items.
-     * TODO: Clean-up this mess (Item Type Objects?)
      *
      * @return string
      * @throws \Exception
