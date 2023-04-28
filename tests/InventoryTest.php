@@ -10,14 +10,6 @@ use SteamInventory\Inventory;
 
 final class InventoryTest extends TestCase
 {
-    public function testInventoryOptionsInvalid()
-    {
-        $this->expectException(InventoryOptionsException::class);
-        $this->expectExceptionMessage('$options must be of type array.');
-
-        $inventory = new Inventory(true);
-    }
-
     public function testInventoryOptionsWithoutSteamID(): void
     {
         $this->expectException(InventoryOptionsException::class);

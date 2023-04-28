@@ -52,10 +52,6 @@ class Inventory
      */
     public function __construct(array $options)
     {
-        if (!\is_array($options)) {
-            throw new InventoryOptionsException('$options must be of type array.');
-        }
-
         if (empty($options['steamid'])) {
             throw new InventoryOptionsException('$options must specify a steamid.');
         }
