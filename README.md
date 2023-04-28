@@ -12,7 +12,7 @@ The library is designed to be easily extendable by other developers. It should b
 ## Requirements
 * PHP 8.X  
 
-This library supports all [officially and actively supported PHP versions](https://www.php.net/supported-versions.php). PHP 7.4 will soon reach its EOL on November 28, 2022 and the library already makes use of useful features from PHP 8.0, so this version is no longer supported.  
+This library supports all [officially and actively supported PHP versions](https://www.php.net/supported-versions.php).
 
 See the ``composer.json`` for other requirements.  
 
