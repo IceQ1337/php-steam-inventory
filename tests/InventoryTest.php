@@ -18,7 +18,7 @@ final class InventoryTest extends TestCase
         $inventory = new Inventory(true);
     }
 
-    public function testInventoryOptionsWithoutSteamID()
+    public function testInventoryOptionsWithoutSteamID(): void
     {
         $this->expectException(InventoryOptionsException::class);
         $this->expectExceptionMessage('$options must specify a steamid.');
@@ -28,7 +28,7 @@ final class InventoryTest extends TestCase
         ]);
     }
 
-    public function testInventoryOptionsWithInvalidSteamID()
+    public function testInventoryOptionsWithInvalidSteamID(): void
     {
         $this->expectException(InventoryOptionsException::class);
         $this->expectExceptionMessage('$options contains an invalid steamid.');
@@ -38,7 +38,7 @@ final class InventoryTest extends TestCase
         ]);
     }
 
-    public function testInventoryFromPrivateProfile()
+    public function testInventoryFromPrivateProfile(): void
     {
         $this->expectException(PrivateInventoryException::class);
 
@@ -47,7 +47,7 @@ final class InventoryTest extends TestCase
         ]);
     }
 
-    public function testInventoryEmpty()
+    public function testInventoryEmpty(): void
     {
         $this->expectException(EmptyInventoryException::class);
 
@@ -61,7 +61,7 @@ final class InventoryTest extends TestCase
         $inventory = new Inventory($options);
     }
 
-    public function testInventoryWithMoreItems()
+    public function testInventoryWithMoreItems(): void
     {
         $options = [
             'steamid' => '76561198129782984',
@@ -77,7 +77,7 @@ final class InventoryTest extends TestCase
         $this->assertGreaterThan(\count($items), $inventory->total_inventory_count);
     }
 
-    public function testInventoryWithoutFurtherItems()
+    public function testInventoryWithoutFurtherItems(): void
     {
         $options = [
             'steamid' => '76561198129782984',

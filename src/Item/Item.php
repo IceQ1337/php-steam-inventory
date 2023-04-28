@@ -6,24 +6,16 @@ class Item
 {
     /**
      * The item's asset object.
-     *
-     * @var Asset
      */
     public ItemAsset $asset;
 
     /**
      * The item's description object.
-     *
-     * @var ItemDescription
      */
     public ItemDescription $description;
 
     /**
      * Creates a new inventory item.
-     *
-     * @param  array $asset
-     * @param  array $description
-     * @return void
      */
     public function __construct(array $asset, array $description)
     {
@@ -33,8 +25,6 @@ class Item
 
     /**
      * Returns the name of the item.
-     *
-     * @return string
      */
     public function getName(): string
     {
@@ -43,8 +33,6 @@ class Item
 
     /**
      * Returns a list of item descriptions.
-     *
-     * @return array
      */
     public function getDescriptions(): array
     {
@@ -53,8 +41,6 @@ class Item
 
     /**
      * Returns the item type.
-     *
-     * @return string
      */
     public function getType(): string
     {
@@ -73,8 +59,6 @@ class Item
 
     /**
      * Returns the URL for the icon image of the item.
-     *
-     * @return string
      */
     public function getIcon(): string
     {
@@ -83,8 +67,6 @@ class Item
 
     /**
      * Returns the URL for the large icon image of the item.
-     *
-     * @return string
      */
     public function getIconLarge(): string
     {
@@ -94,8 +76,6 @@ class Item
     /**
      * Returns the amount of the item (e.g. for Steam Gems).
      * Note: Steam Gems are often split into separate items. The amount is not accumulated.
-     *
-     * @return int
      */
     public function getAmount(): int
     {
@@ -105,10 +85,8 @@ class Item
     /**
      * Returns the appid of the app this item belongs to
      * if it differs from the inventory appid (e.g. for Trading Cards).
-     *
-     * @return int|null
      */
-    public function getRealAppID(): mixed
+    public function getRealAppID(): ?int
     {
         foreach ($this->getTags() as $tag) {
             if ($tag->category == 'Game') {
@@ -122,8 +100,6 @@ class Item
 
     /**
      * Returns 'true' if the item is tradable.
-     *
-     * @return bool
      */
     public function isTradable(): bool
     {
@@ -132,8 +108,6 @@ class Item
 
     /**
      * Returns 'true' if the item is marketable.
-     *
-     * @return bool
      */
     public function isMarketable(): bool
     {
@@ -143,7 +117,6 @@ class Item
     /**
      * Returns a human readable type identifier for Steam items.
      *
-     * @return string
      * @throws \Exception
      */
     public function getSteamItemType(): string

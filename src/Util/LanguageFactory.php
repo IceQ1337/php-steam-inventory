@@ -6,10 +6,8 @@ final class LanguageFactory
 {
     /**
      * List of all available languages.
-     *
-     * @var array
      */
-    private static $languages = [
+    private static array $languages = [
         'arabic',
         'brazilian',
         'bulgarian',
@@ -41,8 +39,6 @@ final class LanguageFactory
 
     /**
      * Returns a list of all available languages.
-     *
-     * @return array
      */
     public static function getAll(): array
     {
@@ -51,22 +47,16 @@ final class LanguageFactory
 
     /**
      * Returns true if the specified language is available.
-     *
-     * @param  string $language
-     * @return bool
      */
-    public static function isValid($language): bool
+    public static function isValid(string $language): bool
     {
         return \in_array(\strtolower($language), self::$languages);
     }
 
     /**
      * Returns the default language 'english' if the specified language is not available.
-     *
-     * @param  string $language
-     * @return string
      */
-    public static function getLanguage($language): string
+    public static function getLanguage(string $language): string
     {
         if (!isset($language) || !self::isValid($language)) {
             return 'english';
@@ -77,8 +67,6 @@ final class LanguageFactory
 
     /**
      * Returns the default language 'english'
-     *
-     * @return string
      */
     public static function getDefaultLanguage(): string
     {

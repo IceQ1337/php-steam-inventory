@@ -6,149 +6,108 @@ class ItemDescription
 {
     /**
      * The base URL for item images.
-     *
-     * @var string
      */
     const IMAGE_URL = 'https://steamcommunity-a.akamaihd.net/economy/image/';
 
     /**
      * The 'appid' of the item.
-     *
-     * @var int
      */
-    public $appid;
+    public int $appid;
 
     /**
      * The 'classid' of the item.
-     *
-     * @var string
      */
-    public $classid;
+    public string $classid;
 
     /**
      * The 'instanceid' of the item.
-     *
-     * @var string
      */
-    public $instanceid;
+    public string $instanceid;
 
     /**
      * The 'currency' of the item.
-     *
-     * @var int
      */
-    public $currency;
+    public int $currency;
 
     /**
      * The 'background_color' of the item.
-     *
-     * @var string|null
      */
-    public $background_color;
+    public ?string $background_color;
 
     /**
      * The 'icon_url' of the item.
-     *
-     * @var string
      */
-    public $icon_url;
+    public string $icon_url;
 
     /**
      * The 'icon_url_large' of the item.
-     *
-     * @var string|null
      */
-    public $icon_url_large;
+    public ?string $icon_url_large;
 
     /**
      * The contents of the item description.
-     *
-     * @var array
      */
-    public $descriptions = [];
+    public array $descriptions = [];
 
     /**
      * 1 (true) if the item is tradable.
-     *
-     * @var int
      */
-    public $tradable;
+    public int $tradable;
 
     /**
      * The 'name' of the item.
-     *
-     * @var string
      */
-    public $name;
+    public string $name;
 
     /**
      * The 'type' of the item.
-     *
-     * @var string
      */
-    public $type;
+    public string $type;
 
     /**
      * The 'market_name' of the item.
-     *
-     * @var string
      */
-    public $market_name;
+    public string $market_name;
 
     /**
      * The 'market_hash_name' of the item.
-     *
-     * @var string
      */
-    public $market_hash_name;
+    public string $market_hash_name;
 
     /**
      * The 'market_fee_app' of the item.
-     *
-     * @var int|null
      */
-    public $market_fee_app;
+    public ?int $market_fee_app;
 
     /**
      * The 'commodity' of the item.
-     *
-     * @var int
      */
-    public $commodity;
+    public int $commodity;
 
     /**
      * 1 (true) if the item has a trade restriction.
-     *
-     * @var int
      */
-    public $market_tradable_restriction;
+    public int $market_tradable_restriction;
 
     /**
      * 1 (true) if the item has a market restriction.
-     *
-     * @var int|null
      */
-    public $market_marketable_restriction;
+    public ?int $market_marketable_restriction;
 
     /**
      * 1 (true) if the item is marketable.
-     *
-     * @var int
      */
-    public $marketable;
+    public int $marketable;
 
     /**
      * List of tags for the item.
      *
      * @var ItemTag[]
      */
-    public $tags = [];
+    public array $tags = [];
 
     /**
      * Creates a item description.
-     *
-     * @param  array $data
-     * @return void
      */
     public function __construct(array $data)
     {
@@ -178,8 +137,6 @@ class ItemDescription
 
     /**
      * Returns the URL for the icon image of the item.
-     *
-     * @return string
      */
     public function getIcon(): string
     {
@@ -188,8 +145,6 @@ class ItemDescription
 
     /**
      * Returns the URL for the large icon image of the item.
-     *
-     * @return string
      */
     public function getIconLarge(): string
     {

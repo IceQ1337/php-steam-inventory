@@ -6,37 +6,26 @@ class ItemTag
 {
     /**
      * The category name of the item tag.
-     *
-     * @var string
      */
-    public $category;
+    public string $category;
 
     /**
      * The internal name of the item tag.
-     *
-     * @var string
      */
-    public $internal_name;
+    public string $internal_name;
 
     /**
      * The localized category name of the item tag.
-     *
-     * @var string
      */
-    public $localized_category_name;
+    public string $localized_category_name;
 
     /**
      * The localized name of the item tag.
-     *
-     * @var string
      */
-    public $localized_tag_name;
+    public string $localized_tag_name;
 
     /**
      * Creates a new item tag.
-     *
-     * @param  array $data
-     * @return void
      */
     public function __construct(array $data)
     {
@@ -48,8 +37,6 @@ class ItemTag
 
     /**
      * Returns the localized category name.
-     *
-     * @return string
      */
     public function getCategory(): string
     {
@@ -58,8 +45,6 @@ class ItemTag
 
     /**
      * Returns the localized tag name.
-     *
-     * @return string
      */
     public function getName(): string
     {

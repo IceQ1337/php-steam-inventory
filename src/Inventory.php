@@ -18,51 +18,39 @@ class Inventory
      *
      * @var Item[]
      */
-    public $items = [];
+    public array $items = [];
 
     /**
      * 1 (true) if more items can be fetched from the inventory.
-     *
-     * @var int|null
      */
-    public $more_items;
+    public ?int $more_items;
 
     /**
      * ID of the last fetched asset, 'null' if no more items are available.
-     *
-     * @var string|null
      */
-    public $last_assetid;
+    public ?string $last_assetid;
 
     /**
      * Total number of items in inventory with given context
-     *
-     * @var int
      */
-    public $total_inventory_count;
+    public int $total_inventory_count;
 
     /**
      * Options array for specifying the request parameters.
-     *
-     * @var array
      */
-    private $options = [];
+    private array $options = [];
 
     /**
      * A GuzzleHTTP client to handle web requests.
-     *
-     * @var Client
      */
-    private $httpClient;
+    private Client $httpClient;
 
     /**
      * Creates new inventory and fetches data from the Steam API.
      *
-     * @param  array $options
-     * @return void
      * @throws InventoryOptionsException
      */
-    public function __construct($options)
+    public function __construct(array $options)
     {
         if (!\is_array($options)) {
             throw new InventoryOptionsException('$options must be of type array.');
@@ -105,10 +93,6 @@ class Inventory
 
     /**
      * Adds item entries to the inventory.
-     *
-     * @param  array $assets
-     * @param  array $descriptions
-     * @return void
      */
     private function setItems(array $assets, array $descriptions): void
     {
@@ -124,8 +108,6 @@ class Inventory
 
     /**
      * Initiates the Steam API request(s).
-     *
-     * @return void
      */
     private function fetchInventory(): void
     {
@@ -146,7 +128,6 @@ class Inventory
     /**
      * Executes the request to the Steam API.
      *
-     * @return void
      * @throws PrivateInventoryException
      * The API endpoint always returns a 403 on errors. It's just assumed that the inventory is private if the request was ok.
      * @throws RequestFailedException
@@ -176,8 +157,6 @@ class Inventory
     /**
      * Parses and saves the response from the Steam API.
      *
-     * @param  string $response
-     * @return void
      * @throws EmptyInventoryException
      */
     private function parseInventory(array $data): void
@@ -194,8 +173,6 @@ class Inventory
 
     /**
      * Returns the relative URI for the API request.
-     *
-     * @return string
      */
     private function getRelativeUri(): string
     {
@@ -210,22 +187,16 @@ class Inventory
 
     /**
      * Returns 'true' if the response from the Steam server is valid.
-     *
-     * @param  array $data
-     * @return bool
      */
-    private function isValidResponse($data): bool
+    private function isValidResponse(array $data): bool
     {
         return \boolval($data['success']);
     }
 
     /**
      * Returns 'true' if the response returned an empty inventory.
-     *
-     * @param  array $data
-     * @return bool
      */
-    private function isEmptyInventory($data): bool
+    private function isEmptyInventory(array $data): bool
     {
         if ($data['total_inventory_count'] == 0) {
             return true;

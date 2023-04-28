@@ -6,51 +6,36 @@ class ItemAsset
 {
     /**
      * The 'appid' of the item asset.
-     *
-     * @var string
      */
-    public $appid;
+    public string $appid;
 
     /**
      * The 'contextid' of the item asset.
-     *
-     * @var string
      */
-    public $contextid;
+    public string $contextid;
 
     /**
      * The 'assetid' of the item asset.
-     *
-     * @var string
      */
-    public $assetid;
+    public string $assetid;
 
     /**
      * The 'classid' of the item asset.
-     *
-     * @var string
      */
-    public $classid;
+    public string $classid;
 
     /**
      * The 'instanceid' of the item asset.
-     *
-     * @var string
      */
-    public $instanceid;
+    public string $instanceid;
 
     /**
      * The 'amount' of the item asset.
-     *
-     * @var string
      */
-    public $amount;
+    public string $amount;
 
     /**
      * Creates a new item asset.
-     *
-     * @param  array $data
-     * @return void
      */
     public function __construct(array $data)
     {
