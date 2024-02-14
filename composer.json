@@ -35,16 +35,16 @@
         }
     ],
     "require": {
-        "php": "^8.0",
-        "guzzlehttp/guzzle": "^7.5"
+        "php": "^8.1",
+        "guzzlehttp/guzzle": "^7.8"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^3.8",
-        "phpunit/phpunit": "^9.5"
+        "friendsofphp/php-cs-fixer": "^3.49",
+        "phpunit/phpunit": "^10.5"
     },
     "scripts": {
         "lint": "./vendor/bin/php-cs-fixer fix",
-        "test": "./vendor/bin/phpunit tests --verbose"
+        "test": "./vendor/bin/phpunit tests"
     },
     "archive": {
         "exclude": [

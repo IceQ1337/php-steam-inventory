@@ -10,7 +10,7 @@ While using this API is generally discouraged, it has been part of Steam since f
 The library is designed to be easily extendable by other developers. It should be well documented and includes a comprehensive test suite.  
 
 ## Requirements
-* PHP 8.X  
+* PHP >= 8.1 
 
 This library supports all [officially and actively supported PHP versions](https://www.php.net/supported-versions.php).
 
